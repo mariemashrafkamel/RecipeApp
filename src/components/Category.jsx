@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaPizzaSlice,FaHamburger} from 'react-icons/fa'
-import {GiNoodles,GiChopsticks} from 'react-icons/gi'
+import {GiNoodles,GiChopsticks,GiHouse} from 'react-icons/gi'
 import styled from 'styled-components'
 import {Routes, Route,Link,BrowserRouter, useParams,useRouteMatch,NavLink} from 'react-router-dom'
 
@@ -22,6 +22,10 @@ function Category() {
       <NavLink className="SLink" to={'/cuisine/japanese'}>
         <GiChopsticks/>
         <h4>Japanese</h4>
+      </NavLink>
+      <NavLink className="SLink" to={'/'}>
+        <GiHouse/>
+        <h4>Home</h4>
       </NavLink>
     </div>
   )

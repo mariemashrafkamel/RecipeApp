@@ -55,12 +55,12 @@ function Popular() {
               return (
                 <SplideSlide key={recipe.id}>
                   <Card className="cardRecipe"  key={recipe.id}>
-                  
-                    <p id="gradient"> {recipe.title} </p>
-                    
+                    <Link to={'/page/recipe/'+recipe.id}  state= {{title: recipe.title, url:recipe.image }}>
+                    <p id="gradient"> {recipe.title} </p> 
                     <img src={recipe.image} />
-{/*                     <Gradient/>
- */}                   
+                    </Link>
+                      {/*  <Gradient/>
+                      */}                   
                   </Card>
                 </SplideSlide>
               )

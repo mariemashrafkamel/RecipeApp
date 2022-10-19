@@ -26,8 +26,11 @@ function Cuisine() {
         cuisine.map((item) =>{
           return (
             <div className="CCard" key={item.id}>
+              <Link to={'/page/recipe/'+item.id}  state= {{title: item.title, url:item.image }}>
               <img src={item.image}/>
               <h4>{item.title}</h4>
+              </Link>
+              
             </div>
           )
         })
